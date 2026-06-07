@@ -51,10 +51,16 @@ class Flower(Plant):
 
 
 class Tree(Plant):
-    def __init__(self, name: str, height: float, age: int, trunk_diameter: float) -> None:
+    def __init__(
+            self,
+            name: str,
+            height: float,
+            age: int,
+            trunk_diameter: float
+            ) -> None:
         super().__init__(name, height, age)
         self._trunk_diameter = trunk_diameter
-    
+
     def produce_shade(self) -> None:
         print(f"Tree {self._name} now produces a shade of", end=" ")
         print(f"{round(self._height, 1)} cm long and", end=" ")
@@ -69,7 +75,7 @@ class Vegetable(Plant):
     def __init__(
             self,
             name: str,
-        	height: float,
+            height: float,
             age: int,
             harvest_season: str,
             ):

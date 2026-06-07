@@ -8,7 +8,7 @@ class Plant:
         print(f"{self.name}: {round(self.height, 1)}cm, {self._age} days old")
 
     def grow(self) -> None:
-        self.height += self.growth_rate
+        self.height += 0.8
 
     def age(self) -> None:
         self._age += 1

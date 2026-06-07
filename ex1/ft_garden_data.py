@@ -7,6 +7,7 @@ class Plant:
     def show(self) -> None:
         print(f"{self.name}: {self.height}cm, {self.age} days old")
 
+
 if __name__ == "__main__":
     rose = Plant("Rose", 25, 30)
     sunflower = Plant("Sunflower", 80, 45)
