@@ -18,7 +18,7 @@ if __name__ == "__main__":
     rose = Plant("Rose", 25.0, 30)
     s_height = rose.height
 
-    print("=== Garden Plant Registry ===")
+    print("=== Garden Plant Growth ===")
     rose.show()
 
     for i in range(1, 8):
