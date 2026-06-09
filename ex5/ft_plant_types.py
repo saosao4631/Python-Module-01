@@ -38,7 +38,7 @@ class Flower(Plant):
         self._color = color
         self._blooming_flag = False
 
-    def bloom(self):
+    def bloom(self) -> None:
         self._blooming_flag = True
 
     def show(self) -> None:

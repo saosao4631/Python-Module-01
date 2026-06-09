@@ -6,30 +6,38 @@ class Plant:
 
     def set_height(self, height: float) -> None:
         if height < 0:
-            print(f"{self._name}: Error, height can't be nagative")
+            print(f"{self._name}: Error, height can't be negative")
             print("Height update rejected")
         else:
             self._height = height
-            print(f"Height updated: {round(self._height, 0)}cm")
+            print(f"Height updated: {round(self.get_height(), 0)}cm")
+
+    def get_height(self) -> float:
+        return self._height
 
     def set_age(self, age: int) -> None:
         if age < 0:
-            print(f"{self._name}: Error, age can't be nagative")
+            print(f"{self._name}: Error, age can't be negative")
             print("Age update rejected")
         else:
             self._age = age
-            print(f"age updated: {round(self._age, 0)} days")
+            print(f"age updated: {round(self.get_age(), 0)} days")
 
-    def show(self) -> None:
-        print(
-            f"{self._name}: {round(self._height, 1)}cm, {self._age} days old"
-            )
+    def get_age(self) -> int:
+        return self._age
 
     def grow(self) -> None:
-        self._height += 0.8
+        current_height = self.get_height()
+        self.set_height(current_height + 0.8)
 
     def age(self) -> None:
-        self._age += 1
+        current_age = self.get_age()
+        self.set_age(current_age + 1)
+
+    def show(self) -> None:
+        print(f"{self._name}:", end=" ")
+        print(f"{round(self.get_height(), 1)}cm,", end=" ")
+        print(f"{self.get_age()} days old")
 
 
 if __name__ == "__main__":
